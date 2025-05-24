@@ -1,0 +1,32 @@
+# Node.js Worker Threads Example
+
+This project demonstrates how to offload CPU-intensive tasks to a worker thread in Node.js, improving the responsiveness of your main application thread.
+
+## How It Works
+
+- The main thread delegates a CPU-intensive task (e.g., calculating a large Fibonacci number) to a worker thread.
+- The worker thread performs the computation without blocking the main thread.
+- Results are sent back to the main thread once the computation is complete.
+
+## Usage
+
+1. Run the example:
+
+  ```
+  node main.js
+  ```
+
+You should see output indicating that the main thread remains responsive while the worker thread processes the task.
+
+## Files
+
+- `main.js` - Starts the main thread and offloads work to the worker.
+- `worker.js` - Contains the CPU-intensive task logic.
+
+## Requirements
+
+- Node.js v12.0.0 or higher (for worker threads support)
+
+## License
+
+MIT
